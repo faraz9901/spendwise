@@ -9,7 +9,7 @@ export default function RecentExpenses() {
 
 
     return (
-        <section className='p-3 col-span-2'>
+        <section className='p-3'>
             <div className='flex justify-between pb-3 border-b border-gray-500 dark:border-slate-100'>
                 <h1 className='text-2xl font-bold '>Recent Expenses</h1>
                 <Link to={'/expenses'}  >View All</Link>

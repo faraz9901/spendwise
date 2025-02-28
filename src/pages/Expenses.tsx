@@ -84,7 +84,7 @@ export default function Expenses() {
             <h1 className="font-bold text-2xl">Expenses</h1>
 
             {/* Search Box */}
-            <div className="flex justify-evenly flex-col md:flex-row gap-3 w-full rounded-lg p-2  bg-gray-100  dark:bg-gray-700">
+            <div className="flex  flex-col md:flex-row md:justify-evenly gap-3  rounded-lg p-2  bg-gray-100  dark:bg-gray-700">
                 <div className="flex flex-col gap-2">
                     <label htmlFor="category" className="font-bold">Search by Category</label>
                     <input id="category" name="category" type="search" value={filters.category} onChange={handleSearchFilter} />

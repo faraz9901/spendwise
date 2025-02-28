@@ -9,12 +9,11 @@ export default function Home() {
 
     return (
         <>
-
-            <div className="grid lg:grid-cols-2">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
 
                 <MonthSpending />
 
-                <div className="flex flex-col justify-center items-start">
+                <div className="flex grow flex-col justify-center items-start">
 
                     <select className=" focus:outline-none bg-white text-gray-800  dark:bg-gray-500 dark:text-slate-50   rounded-lg p-2" value={graphType} onChange={(e) => setGraphType(e.target.value as 'day' | 'month')}>
                         <option value="day">Day</option>
@@ -24,10 +23,10 @@ export default function Home() {
                     <ExpensesGraph labels={getLabels(graphType)} datasets={getDatasets(expenses, graphType)} titleText="Expenses (in Rs)" />
                 </div>
 
-
-                <RecentExpenses />
-
             </div>
+
+            <RecentExpenses />
         </>
+
     )
 }
