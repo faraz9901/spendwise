@@ -4,7 +4,7 @@ import { useExpenseStore } from "../store"
 import { useModal } from "../store"
 import { Expense, ModalTypes } from "../types"
 import { Info } from "../assets"
-import { downLoadExcelFromData } from "../utils"
+import { downLoadExcelFromData, useDocumentTitle } from "../utils"
 
 interface Filter {
     category: string
@@ -14,6 +14,9 @@ interface Filter {
 }
 
 export default function Expenses() {
+
+    useDocumentTitle('SpendWise | Expenses')
+
     const { expenses } = useExpenseStore()
     const { showModal } = useModal()
 
@@ -62,8 +65,6 @@ export default function Expenses() {
 
         setFilters({ ...filters, [name]: value })
     }
-
-
     function download() {
         const columns = [
             { header: "Date", key: "date", width: 20 },

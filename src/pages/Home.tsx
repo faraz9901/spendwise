@@ -2,8 +2,11 @@ import { useState } from "react";
 import { ExpensesGraph, MonthSpending, RecentExpenses } from "../components";
 import { useExpenseStore } from "../store";
 import { getDatasets, getLabels } from "../utils/chartsCalculations";
+import { useDocumentTitle } from "../utils";
 
 export default function Home() {
+    useDocumentTitle('SpendWise | Dashboard')
+
     const [graphType, setGraphType] = useState<'day' | 'month'>('day')
     const expenses = useExpenseStore(state => state.expenses)
 

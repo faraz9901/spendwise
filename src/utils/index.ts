@@ -1,4 +1,5 @@
 import downLoadExcelFromData from "./excel";
+import useDocumentTitle from "./useDocumentTitle";
 
 const changeThemeMode = (theme?: string | null) => {
 
@@ -34,4 +35,4 @@ const getDate = (date: string) => new Date(date).toLocaleDateString('en-IN')
 
 
 
-export { changeThemeMode, getDate, downLoadExcelFromData }
+export { changeThemeMode, getDate, downLoadExcelFromData, useDocumentTitle }
